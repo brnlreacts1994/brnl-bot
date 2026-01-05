@@ -160,3 +160,13 @@ setInterval(async () => {
 
 bot.launch();
 console.log("🤖 Bot ativo e rodando!");
+
+const express = require('express');
+const app = express();
+
+const PORT = process.env.PORT || 3000;
+app.get('/', (req, res) => res.send('Bot rodando!'));
+
+app.listen(PORT, () => {
+  console.log(`Servidor escutando na porta ${PORT}`);
+});
